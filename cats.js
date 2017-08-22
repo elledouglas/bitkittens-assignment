@@ -17,12 +17,23 @@ catList[0]["name"]
     // var details = document.querySelector('.cat-box')
     // details.innerHTML = "Photo of cat #{name "
     //
-    var img = document.createElement('img')
-    img.src = catList[0]["photo"]
-    img.alt = " Photo of" +  catList[0]["name"]
 
-  var catDiv = document.querySelector('#cat1')
-  catDiv.append(img)[0]
+
+
+  //
+  var catBoxes = document.querySelectorAll('.cat-box')
+
+  for(var i = 0; i < catBoxes.length; i++){
+    var img = document.createElement('img')
+    img.src = catList[i]["photo"]
+    img.alt = " Photo of" +  catList[i]["name"]
+
+    var catDiv = document.querySelectorAll('.cat-box')
+
+
+    catDiv[i].append(img)
+
+  }
 
     //
     // var catPic = "https://s3.amazonaws.com/bitmakerhq/resources/web-development/bitkittens/20160731_124229.jpeg"
